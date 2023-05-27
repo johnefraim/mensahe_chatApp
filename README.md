@@ -15,9 +15,10 @@ Mensahe is a simple chat application built with [React](https://reactjs.org/) an
 git clone https://github.com/johnefraim/mensahe_chatApp.git
 
 Install the dependencies(Client):
-
+```bash
 cd Client
 npm install
+```bash
 
 Configure the environment variables:
 
