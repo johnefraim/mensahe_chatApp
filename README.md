@@ -16,7 +16,6 @@ git clone https://github.com/johnefraim/mensahe_chatApp.git
 
 Install the dependencies(Client):
 
-```javascript
 cd Client
 npm install
 
