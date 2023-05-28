@@ -16,8 +16,7 @@ socket.on('newMessage', (message) => {
 });
 
 // Send a new message to the server
-export function sendMessage(sender, recipient, content){
+export function sendMessage(sender, content){
   // Emit the 'sendMessage' event to the server with the message data
-  console.log(content,sender,recipient);
-  socket.emit('sendMessage', { sender, recipient, content });
+  socket.emit('sendMessage', { sender, content });
 };

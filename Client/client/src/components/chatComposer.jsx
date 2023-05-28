@@ -6,8 +6,8 @@ import { FaPaperPlane } from 'react-icons/fa';
 
 const ChatComposer = () => {
   const [message, setMessage] = useState('');
-  const user = useSelector((state) => state.auth.user);
-  const selectedUser = useSelector((state) => state.auth.selectedUser);
+  const sender = useSelector((state) => state.auth.user);
+  //const selectedUser = useSelector((state) => state.auth.selectedUser);
   
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -16,9 +16,8 @@ const ChatComposer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(message.trim() !== ''){
-      sendMessage(user._id, selectedUser, message);
+      sendMessage(sender.name, message);
     }
-    console.log('here');
     setMessage('');
   };
 

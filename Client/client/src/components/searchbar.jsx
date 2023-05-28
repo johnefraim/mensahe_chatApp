@@ -42,7 +42,7 @@ const SearchBar = () => {
 
   const handleUserSelect = (user) => {
     setSelectedUser(user);
-    dispatch({ type: 'auth/setSelectedUser', payload: user._id });
+    dispatch({ type: 'auth/setSelectedUser', payload: user.name });
     setSearchTerm('');
     setSearchResults([]);
   };

@@ -77,15 +77,13 @@ io.on('connection', (socket) => {
   // Handle when a client sends a new message
   socket.on('sendMessage', async (data) => {
     try {
-      const { sender, recipient, content } = data;
+      const { sender, content } = data;
 
       // Create a new message instance
-      const message = new Message({ sender, recipient, content });
-      console.log(message);
+      const message = new Message({ sender, content });
       // Save the message to the database
       await message.save();
 
-      
       // Emit the new message to all connected clients except the sender
       socket.broadcast.emit('newMessage', message);
     } catch (error) {
