@@ -48,13 +48,13 @@ const SearchBar = () => {
   };
   
   return (
-    <div className="relative" ref={searchRef}>
+    <div className="relative w-96" ref={searchRef}>
       <input
         type="text"
         placeholder="Search for a user..."
         value={searchTerm}
         onChange={handleSearchTermChange}
-        className='w-full py-2 pl-4 pr-10 text-gray-800 bg-gray-200 rounded-full focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500'
+        className='w-full py-2 pl-4 pr-10 text-black bg-gray-800 rounded-full focus:outline-none focus:bg-white focus:ring-2 focus:ring-gray-800'
       />
       {searchResults.length > 0 && (
         <ul className='absolute z-10 w-full mt-2 bg-white rounded shadow-md'>

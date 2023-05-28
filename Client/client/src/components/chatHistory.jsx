@@ -58,11 +58,10 @@ const ChatHistory = () => {
   }, [chatHistory]);
 
   return (
-    <div className="form" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-      <h2>Chat</h2>
+    <div className="flex item-center h-96 w-auto">
       <div
         ref={chatContainerRef}
-        style={{ flex: '1', overflowY: 'auto', marginBottom: '10px' }}
+        className='grid place-items-center overflow-y-auto overflow-x-hidden'
       >
         <ul>
           {chatHistory.map((message) => (
@@ -76,7 +75,7 @@ const ChatHistory = () => {
         onSubmit={(e) => {
           e.preventDefault();
           const message = {
-            sender: 'Your name', // Replace with the actual sender's name
+            sender: 'Your name',
             content: e.target.elements.message.value,
           };
           sendMessage(message);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { sendMessage } from '../services/messageService';
 import { useSelector } from 'react-redux';
+import { FaPaperPlane } from 'react-icons/fa';
 
 
 const ChatComposer = () => {
@@ -22,7 +23,7 @@ const ChatComposer = () => {
   };
 
   return (
-    <div>
+    <div className='bg-blue-400'>
       <form className='flex justify-end' onSubmit={handleSubmit}>
         <input
           type="text"
@@ -31,8 +32,12 @@ const ChatComposer = () => {
           onChange={handleChange}
           className="flex-grow py-2 px-4 border border-gray-300 rounded-l focus:outline-none focus:border-blue-500"
         />
-        <button className="rounded-full"
-         type="submit button">Send</button>
+        <button
+        className="bg-blue-500 text-white p-2 hover:bg-blue-600"
+        type="submit">
+        <FaPaperPlane className="text-xl" />
+        </button>
+
       </form>
     </div>
   );

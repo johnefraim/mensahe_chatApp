@@ -85,6 +85,7 @@ io.on('connection', (socket) => {
       // Save the message to the database
       await message.save();
 
+      
       // Emit the new message to all connected clients except the sender
       socket.broadcast.emit('newMessage', message);
     } catch (error) {

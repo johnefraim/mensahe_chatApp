@@ -12,7 +12,7 @@ const Layout = () => {
       <header className="bg-gray-800">
         <Navbar />
       </header>
-      <main className="container mx-auto py-4">
+      <main className="flex container mx-auto py-4">
         <SearchBar/>
         <div className="flex">
           <div className="w-3/4 pr-4">
